@@ -1,0 +1,124 @@
+/*
+  * Header
+  */
+ header {
+  background-color: lightgray;
+  padding: 30px 0px;
+  margin-bottom: 30px;
+}
+
+
+
+/*
+  * Container meuk
+  */
+.container-fluid--maxwidth {
+  max-width : 1024px;
+  margin: 0 auto;
+}
+@media all and (min-width : $screen-sm) {
+  .container--display-table {
+    display: table;
+    height:100%;
+    padding-left: 0;
+      padding-right: 0;
+
+    .row { display:table-row; }
+    .row div[class^="col-"], div[class*=" col-"] {
+      display: table-cell;
+      float: none;
+      height: 100%;
+      vertical-align: top;
+    }
+  }
+}
+
+
+.background--primary {
+  background-color:$brand-primary;
+}
+
+
+
+
+
+
+
+/*
+  * Sub navigation
+  */
+nav.sub-nav {
+  padding-top: ($gutter/2);
+  padding-bottom: ($gutter/2);
+
+  a { color:white;}
+}
+
+
+/*
+  * Article meuk
+  */
+article {
+  padding-top: ($gutter/2);
+  padding-bottom: ($gutter/2);
+}
+article figure {
+  margin:($gutter / 2) (-$gutter / 2);
+
+  >img { width: 100%; }
+}
+
+article .intro p {
+  // @include font-size(16);
+  font-weight:bold;
+}
+
+article .intro + figure {
+  margin-top: ($gutter / 2) - $font-size-base;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+  * c-compare products
+  */
+.c-compare__products {
+
+}
+
+.c-compare__table {
+  // margin-left: (-$gutter / 2);
+
+  table {
+    width: 100%;
+  }
+  table tr {
+    border-bottom: 1px solid #62d0ff;
+    &.is-highlighted {
+      background-color: #d1f1ff;
+    }
+  }
+  table td {
+    width: 25%;
+    padding: 5px ($gutter / 2);
+  }
+  // table td:first-child { padding-left: ($gutter / 2) }
+  // table td:last-child { opacity: 0; }
+}
+
+
+/*
+  * Footer
+  */
+footer {
+  background-color: #282828;
+  padding: 30px 0px;
+}

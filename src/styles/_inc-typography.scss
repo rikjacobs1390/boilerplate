@@ -1,0 +1,360 @@
+//== Typography
+//
+
+
+/*
+  html & Body
+  ********************
+  *//* http://stackoverflow.com/questions/20099844/chrome-not-respecting-rem-font-size-on-body-tag */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base +px;
+    font-size: ($font-size-base / 10) + em; /* terugvallen op 'em' i.v.m. chrome bug 'rem' op body tag. zie bovenstaande link */
+
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+        -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*
+  Basics
+  ********************
+  */
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+.bold,
+strong,
+.strong {
+    font-weight: bold;
+}
+i,
+em,
+dfn,
+.itallic {
+    font-style: itallic;
+}
+
+
+/* horizontal ruler */
+hr {
+    display: block;
+
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+ins {
+    text-decoration: none;
+    // color: #000;
+    // background: #ff9;
+}
+
+mark {
+    font-weight: bold;
+    font-style: italic;
+    // color: #000;
+    // background: #ff0;
+}
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+
+    _font-family: 'courier new', monospace;
+}
+
+/* Improve readability of pre-formatted text in all browsers */
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+    quotes: none;
+}
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 85%;
+}
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+
+    position: relative;
+
+    vertical-align: baseline;
+}
+sup {
+    top: -.5em;
+}
+sub {
+    bottom: -.25em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/*
+  blockquote
+  ********************
+  */
+blockquote {
+    // margin: 1em 40px;
+}
+
+
+
+/*
+  Basic fonts
+  ********************
+  */
+a {
+    text-decoration: underline;
+
+    color: $link-color;
+    &:hover {
+        color: $link-color-hover;
+    }
+}
+p {
+    font-family: $font-family-base;
+
+    padding: 0 0 $font-size-base 0;
+
+    color: $text-color;
+
+    @include font-size($font-size-base);
+    @include line-height($line-height-base);
+}
+
+
+
+
+
+/*
+  Headings
+  ********************
+  */
+h1 {
+    font-weight: 700;
+
+    padding: 0 0 24px 0;
+
+    color: $brand-primary;
+
+    @include font-size(30);
+    -webkit-column-span: all;
+       -moz-column-span: all;
+        -ms-column-span: all;
+         -o-column-span: all;
+            column-span: all;
+}
+h2 {
+    font-weight: 600;
+
+    padding: 0 0 14px 0;
+
+    @include font-size(20);
+    -webkit-column-span: all;
+       -moz-column-span: all;
+        -ms-column-span: all;
+         -o-column-span: all;
+            column-span: all;
+}
+h3 {
+    font-weight: 600;
+
+    padding: 0 0 14px 0;
+
+    @include font-size(16);
+    -webkit-column-span: all;
+       -moz-column-span: all;
+        -ms-column-span: all;
+         -o-column-span: all;
+            column-span: all;
+}
+h4 {
+    font-weight: 500;
+
+    padding: 0 0 14px 0;
+
+    @include font-size(16);
+    -webkit-column-span: all;
+       -moz-column-span: all;
+        -ms-column-span: all;
+         -o-column-span: all;
+            column-span: all;
+}
+h5,
+h6 {
+    font-weight: 400;
+
+    padding: 0 0 14px 0;
+
+    @include font-size(14);
+    -webkit-column-span: all;
+       -moz-column-span: all;
+        -ms-column-span: all;
+         -o-column-span: all;
+            column-span: all;
+}
+
+
+/*
+  Multicolumn
+  ********************
+  */
+.article__multicolumn--2 {
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    -webkit-column-width: 200px;
+       -moz-column-width: 200px;
+            column-width: 200px;
+}
+.article__multicolumn--3 {
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    -webkit-column-width: 200px;
+       -moz-column-width: 200px;
+            column-width: 200px;
+}
+.article__multicolumn--4 {
+    -webkit-columns: 4;
+       -moz-columns: 4;
+            columns: 4;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    -webkit-column-width: 200px;
+       -moz-column-width: 200px;
+            column-width: 200px;
+}
+
+
+
+
+
+
+
+
+
+/*
+  Article styling
+  ********************
+  */
+article {
+    // padding:0 20px;
+}
+
+
+
+/*
+  Standaard ul en ol in articles
+  ********************
+  */
+article ul,
+article ol {
+    margin-bottom: 14px;
+}
+article ul li {
+    margin-left: 14px;
+    margin-left: 1.4rem;
+
+    @include line-height(25);
+    &:before {
+        display: inline-block;
+
+        width: 4px;
+        height: 4px;
+        margin-right: 10px;
+        margin-right: 1rem;
+        margin-left: -10px;
+        margin-left: -1rem;
+
+        content: '';
+        vertical-align: middle;
+
+        background: $gray;
+
+        @include border-radius(100%);
+    }
+}
+article ol {
+    counter-reset: ol;
+}
+article ol li {
+    margin-left: 14px;
+    margin-left: 1.4rem;
+
+    counter-increment: ol;
+
+    @include line-height(25);
+    &:before {
+        display: inline;
+
+        margin-right: 10px;
+        margin-right: 1rem;
+        margin-left: -10px;
+        margin-left: -1rem;
+
+        content: counters(ol,'.');
+        vertical-align: middle;
+
+        color: inherit;
+    }
+}
+
+
+
+
+
+/*
+  * Helpers
+  */
+.text-center {
+    text-align: center;
+}

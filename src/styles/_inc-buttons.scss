@@ -1,0 +1,116 @@
+// Buttons
+// --------------------------------------------------
+
+/*
+  * Default buttons
+  */
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+
+
+
+/*
+  * Custom btn
+  */
+.btn {
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 10px 10px;
+    padding: 1rem 1rem;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: white;
+    border: none;
+    outline: none;
+
+    @include transition(all .2s ease-in-out);
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+/*
+  * Positioning
+  */
+.btn--pull-left {
+    float: left;
+}
+.btn--pull-right {
+    float: right;
+}
+
+.btn--block {
+    display: block;
+}
+
+
+/*
+  * Sizes
+  */
+.btn--xl {
+    @include font-size(35);
+    @include line-height(35);
+}
+.btn--lg {
+    @include font-size(30);
+    @include line-height(30);
+}
+.btn--md {
+    @include font-size(25);
+    @include line-height(25);
+}
+.btn--sm {
+    @include font-size(20);
+    @include line-height(20);
+}
+.btn--xs {
+    @include font-size(15);
+    @include line-height(15);
+}
+
+
+/*
+  * Colors
+  */
+.btn--primary {
+    background-color: $btn_primary;
+    &:hover {
+        background-color: darken($btn_primary, 10%);
+    }
+}
+.btn--secondary {
+    background-color: $btn_secondary;
+    &:hover {
+        background-color: darken($btn_secondary, 10%);
+    }
+}
+
+
+/*
+  * States
+  */
+.btn--disabled {
+    opacity: .5;
+    cursor: default;
+}

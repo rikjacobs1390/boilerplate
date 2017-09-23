@@ -1,0 +1,30 @@
+{
+  "name": "Boilerplate",
+  "description": "Description here",
+  "private": true,
+  "keywords": [
+    "Keyword",
+    "Keyword"
+  ],
+  "version": "1.0.0", 
+  "author": {
+    "name": "Rik Jacobs",
+    "email": "info@rikjacobs.com",
+    "url": "http://www.rikjacobs.com/"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "browser-sync": "*",
+    "gulp-jshint": "*",
+    "gulp-sass": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-rename": "*",
+    "gulp-clean-css": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-header": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-imagemin": "*"
+  }
+}
