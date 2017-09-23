@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
 	<?php
-	$page__title = 'Basis';
-	$page__robots = 'nofollow, noindex';
-	$page__description = 'description';
-	$page__keywords = 'keywords';
-	$page__author = 'author';
-	$page__sitename = 'www.sitename.com';
-	$page__url = 'http://www.boilerplate.nl';
-	$page__image = 'http://www.boilerplate.nl/-sitedesign/shareimage.jpg';
+    	$page__title = 'Basis';
+    	$page__robots = 'nofollow, noindex';
+    	$page__description = 'description';
+    	$page__keywords = 'keywords';
+    	$page__author = 'author';
+    	$page__sitename = 'www.sitename.com';
+    	$page__url = 'http://www.boilerplate.nl';
+    	$page__image = 'http://www.boilerplate.nl/-sitedesign/shareimage.jpg';
 	?>
 	<?php include '-includes/head.php'; ?>
 <body>
